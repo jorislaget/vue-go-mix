@@ -1,0 +1,4 @@
+node_modules/
+hot
+.env
+.idea/
