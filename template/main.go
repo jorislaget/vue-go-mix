@@ -1,13 +1,13 @@
 package main
 
 import (
-	"net/http"
-	"io/ioutil"
-	"log"
 	"encoding/json"
-	"os"
 	"github.com/lazureykis/dotenv"
 	"html/template"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"os"
 )
 
 type Manifest struct {
@@ -31,7 +31,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	index := template.Must(template.ParseFiles(
-		"src/views/index.html",
+		"views/index.html",
 	))
 	index.Execute(w, manifest)
 }
